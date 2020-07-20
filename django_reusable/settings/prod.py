@@ -19,10 +19,10 @@ ALLOWED_HOSTS = ['ip-address', 'www.website-name.com']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'news_entertainment',
-        'USER': 'gaurav_jaiswal',
-        'PASSWORD': 'Kapaltrika#!79',
-        'HOST': 'localhost',
+        'NAME': os.environ.get('SET_DB_NAME'),
+        'USER': os.environ.get('SET_DB_USER'),
+        'PASSWORD': os.environ.get('SET_DB_PASSWORD'),
+        'HOST': os.environ.get('SET_ALLOWD_DB_HOST'),
         'PORT': '',
     }
 }
