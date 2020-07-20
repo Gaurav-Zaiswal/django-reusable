@@ -99,6 +99,7 @@ or, just add add following lines to your_virtual_environment/bin/avtivat
 
 export DJANGO_SECRET_KEY="9^8*...."
 export SET_DEBUG="False"
+and so on...
 
 similary, add third pary API keys like, fb's, twitter's, etc.
 note: there should not be any space.
