@@ -70,6 +70,11 @@ wsgi.py, asgi.py, urls.py, and __init__.py are located
             b.  WSGI_APPLICATION = 'your_project_name.wsgi.application'
                 e.g.
                 WSGI_APPLICATION = 'django_reusable.wsgi.application'
+    D.  you also need to update, manage.py. So in manage.py
+            for development:
+                os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project_name.settings.dev')
+            for production:
+                os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project_name.settings.prod')
 
 
 //////////////////////////////////////////////////
@@ -95,6 +100,6 @@ or, just add add following lines to your_virtual_environment/bin/avtivat
 export DJANGO_SECRET_KEY="9^8*...."
 export SET_DEBUG="False"
 
-similary, add third pary API keies like, fb, twitter, etc.
+similary, add third pary API keys like, fb's, twitter's, etc.
 note: there should not be any space.
 now restart the virtual environment.
